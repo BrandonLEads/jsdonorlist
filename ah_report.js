@@ -21,21 +21,21 @@
       information for the donor
       
 */
-var donationTotal = 0;
+let donationTotal = 0;
 donors.forEach(calcSum); 
 
-var summaryTable = "<table>\
+let summaryTable = "<table>\
 <tr><th></th><td>" + donors.length + "</td></tr>\
 <tr><th>Total Donations</th><td>$" + donationTotal.toLocaleString() + "</td></tr>\
 </table>";
 
 document.getElementById("donationSummary").innerHTML = summaryTable;
 
-var majorDonors = donors.filter(findMajorDonors);
+let majorDonors = donors.filter(findMajorDonors);
 
 majorDonors.sort(donorSortDescending);
 
-var donorTable = "<table>\
+let donorTable = "<table>\
 <caption>Major Donors</caption>\
 <tr>\
 <th>Donation</th><th>Donor ID</th>\
